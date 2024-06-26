@@ -147,7 +147,7 @@ function loginUser(event) {
 
       
       setTimeout(function() {
-          window.location.href = 'ryryry.html';
+          window.location.href = 'index.html';
       }, 3000); 
 
   } else {
