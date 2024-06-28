@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="ryryry.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <h1>KTelevision</h1>
+    <input type="search" placeholder="Search" id="search" />
+    <nav>
+      <ul>
+        <li><a id="login-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="filter-container">
+      <select id="movie-genres">
+        <option value="all">All</option>
+        <option value="Romantic Comedy">Romantic Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Action">Action</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Science Fiction">Sci-fi</option>
+        <option value="Fantasy">Fantasy</option>
+      </select>
+    </div>
+    <div class="container">
+      <div class="content" id="movie-list">
+        <div class="box" data-genre="Fantasy">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Moving.jpg" alt="Moving" class="movie-poster"
+            data-title="Moving" data-release="2023-08-09" data-director="Park In-je" data-genre="Fantasy">
+          <figcaption>Moving</figcaption>
+        </div>
+        <div class="box" data-genre="Romantic Comedy">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Hometown Ch.jpg" alt="Hometown Cha-Cha-Cha" class="movie-poster"
+            data-title="Hometown Cha-Cha-Cha" data-release="2021-08-21" data-director="Yoo Je-won" data-genre="Romantic Comedy">
+          <figcaption>Hometown Cha-Cha-Cha</figcaption>
+        </div>
+        <div class="box" data-genre="Science Fiction">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Alienoid.jpg" alt="Alienoid" class="movie-poster"
+            data-title="Alienoid" data-release="2022-07-20" data-director="Choi Dong-hoon"
+            data-genre="Sci-fi">
+          <figcaption>Alienoid</figcaption>
+        </div>
+        <div class="box" data-genre="Action">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\TheK2.jpg" alt="The K2" class="movie-poster"
+            data-title="The K2" data-release="2019-09-30" data-director="Kwak Jung-Hwan" data-genre="Action">
+          <figcaption>K2</figcaption>
+        </div>
+        <div class="box" data-genre="Action">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Vagabond.jpg" alt="" class="movie-poster" data-title="Vagabond"
+            data-release="2019-09-20" data-director="Yoo In Sik" data-genre="Action">
+          <figcaption>Vagabond</figcaption>
+        </div>
+        <div class="box" data-genre="Romantic Comedy">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Queen of Tears.png" alt="" class="movie-poster"
+            data-title="Queen of Tears" data-release="2024-03-09"
+            data-director="Jang Young-woo, Kim hee-won" data-genre="Romantic Comedy">
+          <figcaption>Queen of Tears</figcaption>
+        </div>
+        <div class="box" data-genre="Thriller">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Hierarchy.jpg" alt="" class="movie-poster" data-title="Hierarchy"
+            data-release="2024-06-07" data-director="Bae Hyeon-jin" data-genre="Thriller">
+          <figcaption>Hierarchy</figcaption>
+        </div>
+        <div class="box" data-genre="Drama">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Itaewon Class.jpg" alt="" class="movie-poster" data-title="Itaewon Class"
+            data-release="2020-02-11" data-director="Kim Seong-yoon" data-genre="Drama">
+          <figcaption>Itaewon Class</figcaption>
+        </div>
+        <div class="box" data-genre="Science Fiction">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Sweet Home.jpg" alt="" class="movie-poster" data-title="Sweet Home"
+            data-release="2020-12-18" data-director="Lee Eung Bok" data-genre="Sci-fi">
+          <figcaption>Sweet Home</figcaption>
+        </div>
+        <div class="box" data-genre="Thriller">
+          <img src="C:\Users\Rynel\Desktop\Sudayan ICT-008 Finals\posters\Strangers from Hell.jpg" alt="" class="movie-poster" data-title="Strangers from Hell"
+            data-release="2020-05-14" data-director="Chang-hee Lee" data-genre="Thriller">
+          <figcaption>Strangers from Hell</figcaption>
+        </div>
+      </div>
+
+      <div id="movieModal" class="modal">
+        <div class="movie">
+          <span class="close">&times;</span>
+          <img src="" alt="Movie Poster" class="modal-poster" id="modalPoster">
+          <h2 id="modalTitle"></h2>
+          <p><strong>Release Date:</strong> <span id="modalReleaseDate"></span></p>
+          <p><strong>Genre:</strong> <span id="modalGenre"></span></p>
+          <p><strong>Director:</strong> <span id="modalDirector"></span></p>
+          <button>WATCH</button>
+        </div>
+      </div>
+
+      <div id="loginModal" class="modal">
+        <div class="login">
+          <span class="close">&times;</span>
+          <form>
+            <h2>Login</h2>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+            <a href="signup.html">No account? Sign up Instead.</a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <p>Designed by Sudayan, Rynel John L. of BSIT 22A2 for ICT 008 Final Project.</p>
+    <p>&copy; 2024 KTelevision. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
